@@ -6,6 +6,9 @@
     <div class="card w-25 mb-2 p-2">
       <h2><%= restaurant.name %></h2>
       <p>owned by <%= restaurant.user.email %></p>
+      <% if user_signed_in? && current_user == restaurant.user %>
+        <%= link_to "X", "#"  %>
+      <% end %>
     </div>
   <% end %>
 

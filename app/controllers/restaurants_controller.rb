@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
   end
 
   def myrestaurants
-    @myrestaurants = current_user.restaurants
+    # @myrestaurants = current_user.restaurants
+    @myrestaurants = policy_scope(Restaurant)
   end
 end
