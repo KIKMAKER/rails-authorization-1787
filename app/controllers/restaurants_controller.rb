@@ -4,4 +4,8 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
   end
+
+  def myrestaurants
+    @myrestaurants = current_user.restaurants
+  end
 end
